@@ -86,12 +86,10 @@ WHERE patient_id = 1;
 
 -- Câu 4: Xóa dữ liệu
 -- 4.1 Xóa các lịch khám trong năm 2023
--- Lưu ý: Cần tắt chế độ Safe Update nếu gặp lỗi (SET SQL_SAFE_UPDATES = 0;)
 DELETE FROM Appointments
 WHERE YEAR(appointment_date) = 2023;
 
 -- 4.2 Xóa bác sĩ có tên "Dr. Trinh Ly"
--- (Sau khi xóa lịch khám năm 2023 ở trên, Dr. Trinh Ly không còn ràng buộc khóa ngoại nên có thể xóa)
 DELETE FROM Doctors
 WHERE doctor_name = 'Dr. Trinh Ly';
 
